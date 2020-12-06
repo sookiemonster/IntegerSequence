@@ -12,4 +12,8 @@ public class Range implements IntegerSequence {
   public void reset() {
     this.current = this.start;
   }
+
+  public int length() {
+    return (this.end - this.start) + 1;
+  }
 }
