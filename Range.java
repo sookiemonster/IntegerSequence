@@ -18,6 +18,14 @@ public class Range implements IntegerSequence {
   }
 
   public boolean hasNext() {
-    return (this.current < end) 
+    return (this.current <= end);
+  }
+
+  public int next() throws NoSuchElementException {
+    if (!this.hasNext()) {
+      throw new NoSuchElementException("Element out of range: " +  start + " to " + end);
+    }
+    this.current++;
+    return this.current - 1;
   }
 }
