@@ -8,4 +8,8 @@ public class Range implements IntegerSequence {
     this.end = end;
     this.current = start;
   }
+
+  public void reset() {
+    this.current = this.start;
+  }
 }
