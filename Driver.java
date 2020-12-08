@@ -10,6 +10,16 @@ public class Driver{
 
     Range n = new Range(-10,10);
     test(n);
+
+    System.out.println();
+    System.out.println("ArraySequence Testing");
+    int[] a = {0,1,2};
+    ArraySequence t = new ArraySequence(a);
+    test(t);
+
+    int[] b = {-2, 0, 123, 9000};
+    ArraySequence t2 = new ArraySequence(b);
+    test(t2);
   }
 
   public static void test(IntegerSequence nums) {
@@ -20,12 +30,15 @@ public class Driver{
       }
     }
     System.out.println();
+    System.out.println("Sequence length: " + nums.length());
     try {
+      System.out.println("Has Next Element (should be false): " + nums.hasNext());
       System.out.println(nums.next());
     } catch (NoSuchElementException e){
       System.out.println("Correct error");
       nums.reset();
-      System.out.println(nums.next());
+      System.out.println("First element: " + nums.next());
     }
+    System.out.println();
   }
 }

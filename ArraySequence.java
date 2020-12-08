@@ -18,7 +18,7 @@ public class ArraySequence implements IntegerSequence {
   }
 
   public boolean hasNext() {
-    return (this.currentIndex <= this.length());
+    return (this.currentIndex < this.length());
   }
 
   public int next() throws NoSuchElementException {
