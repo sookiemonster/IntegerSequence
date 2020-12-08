@@ -12,4 +12,8 @@ public class ArraySequence implements IntegerSequence {
   public void reset() {
     this.currentIndex = 0;
   }
+
+  public int length() {
+    return this.data.length;
+  }
 }
