@@ -13,13 +13,23 @@ public class Driver{
 
     System.out.println();
     System.out.println("ArraySequence Testing");
+    System.out.println();
     int[] a = {0,1,2};
     ArraySequence t = new ArraySequence(a);
     test(t);
 
     int[] b = {-2, 0, 123, 9000};
     ArraySequence t2 = new ArraySequence(b);
+    b[0] = 535;
     test(t2);
+
+    System.out.println();
+    System.out.println("ArraySequence Second Constructor");
+    System.out.println();
+
+    IntegerSequence rr = new Range(10,20);
+    IntegerSequence as = new ArraySequence(rr);
+    test(as);
   }
 
   public static void test(IntegerSequence nums) {

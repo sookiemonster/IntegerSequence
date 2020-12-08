@@ -13,7 +13,13 @@ public class ArraySequence implements IntegerSequence {
   }
 
   public ArraySequence(IntegerSequence other) {
-
+    this.currentIndex = 0;
+    this.data = new int[other.length()];
+    other.reset();
+    for (int i = 0; i < data.length; i++) {
+      data[i] = other.next();
+    }
+    other.reset();
   }
 
   public void reset() {
