@@ -8,4 +8,8 @@ public class ArraySequence implements IntegerSequence {
     this.currentIndex = 0;
     this.data = other;
   }
+
+  public void reset() {
+    this.currentIndex = 0;
+  }
 }
